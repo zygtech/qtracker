@@ -28,7 +28,7 @@ def saveid(query):
             f.close()
 
 def main():
-    saveid("Red Square Krasnaya ploshchad', Moskva, Russia, 109012")
+    saveid("Eiffel Tower, Paris")
 
 if __name__ == '__main__':
     main()
