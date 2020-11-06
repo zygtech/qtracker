@@ -1,4 +1,4 @@
-# popularitytracker
+# qtracker
 
 [Example Tracking Site](https://zygtech.pl/qtracker/)
 
