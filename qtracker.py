@@ -29,6 +29,7 @@ def saveid(query):
 
 def main():
     saveid("Eiffel Tower, Paris")
+    saveid("Statue of Liberty")
 
 if __name__ == '__main__':
     main()
