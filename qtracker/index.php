@@ -25,7 +25,7 @@ foreach ($dir as $file)
 ?>
 	<form>
 		<label>PLACE:</label>
-		<select name="id">
+		<select style="width: 909px;" name="id">
 		<option disabled<?php if ($_GET['id']=='') echo ' selected'; ?>>CHOOSE LOCALIZATION</option>
 		<?php
 		foreach ($names as $key=>$line) {
