@@ -8,7 +8,7 @@ PHP and Python written scripts to monitor popularity of chosen places every hour
 
 Installation:
 1. `Clone` or `unpack ZIP` on server in example to `home` folder
-2. Edit `qtracker.py` by changing final `URL` of your site and place's `search string` in lines with function `saveid()`
+2. Edit `qtracker.py` by changing final `URL` of your site and places' `search strings` in lines with function `saveid()`
 3. Copy folder `qtracker` to `Apache/Nginx` public web folder
 4. Edit `config.php` in this folder with `qtracker` PATH and min/max hour (same as futher in `CRON`)
 5. Run `python3 qtracker.py init` to initialize script
