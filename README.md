@@ -4,7 +4,7 @@
 
 PHP and Python written scripts to monitor popularity of chosen places every hour between any range of hours. Uses:
 + [SimpleXLSXGen](https://github.com/shuchkin/simplexlsxgen/)
-+ [Chart.js](https://www.chartjs.org/)
++ [Chart.js](https://github.com/chartjs/Chart.js)
 
 Installation:
 1. `Clone` or `unpack ZIP` on server in example to `home` folder
