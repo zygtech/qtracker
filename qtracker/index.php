@@ -84,7 +84,7 @@ var myBarChart = new Chart(ctx, {
 		},
         title: {
             display: true,
-            text: "Stats at <?php echo $_GET['hour']; ?>:00"
+            text: "Statistics at <?php echo $_GET['hour']; ?>:00"
         },
         scales: {
             yAxes: [{
