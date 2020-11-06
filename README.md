@@ -14,5 +14,5 @@ Installation:
 5. Run `python3 qtracker.py init` to initialize script
 6. Add to `CRON` by running `crontab -e` and adding in example `(Monday - Saturday from 10:00-20:00)` line:
     + `0 10-20 * * 1-6 python3 /home/pi/qtracker/qtracker.py`
-7. Open `qtracker URL` in browser and monitor popularity of any places
+7. Open `qtracker URL` in browser and monitor popularity of chosen places
 
