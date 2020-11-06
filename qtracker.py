@@ -15,10 +15,7 @@ def saveid(query):
         content = response.read()
         f = open(path + "/places/" + hashlib.md5(query.encode('utf-8')).hexdigest() + ".txt", "a")
         d = datetime.datetime.now()
-        try:
-            f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content).replace("'","").replace("b","") + "\n")
-        except:
-            f.write(d.strftime("%Y-%m-%d %H") + ": N\n")
+        f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content).replace("'","").replace("b","") + "\n")
         f.close()
     else:
         if (sys.argv[1]=="init"):
