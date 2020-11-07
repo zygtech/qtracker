@@ -18,7 +18,7 @@
 		for ($i=0;$i<$l-$minhour;$i++)
 			$row[]=0;
 		foreach ($lines as $line) {
-			$row[]=intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1));
+			$row[]=round(intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
 			$l++;
 			if ($l==$maxhour+1) {
 				array_unshift($row,explode(' ',$line)[0]);
@@ -52,7 +52,7 @@
 			for ($i=0;$i<$l-$minhour;$i++)
 				$row[]=0;
 			foreach ($lines as $line) {
-				$row[]=intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1));
+				$row[]=round(intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
 				$l++;
 				if ($l==$maxhour+1) {
 					array_unshift($row,explode(' ',$line)[0]);
