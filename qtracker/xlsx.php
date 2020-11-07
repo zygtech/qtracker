@@ -18,7 +18,7 @@
 		for ($i=0;$i<$l-$minhour;$i++)
 			$row[]=0;
 		foreach ($lines as $line) {
-			$row[]=round(intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
+			$row[]=round(floatval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
 			$l++;
 			if ($l==$maxhour+1) {
 				array_unshift($row,explode(' ',$line)[0]);
@@ -40,7 +40,6 @@
 				$names[explode('.',$file)[0]]=trim(file($installdir . '/names/' . $file)[0]);
 		$excel=array();
 		foreach ($names as $key=>$name) {
-			$excel=array();
 			$row=array();
 			$row[]='Date';
 			for ($i=$minhour;$i<=$maxhour;$i++)
@@ -52,7 +51,7 @@
 			for ($i=0;$i<$l-$minhour;$i++)
 				$row[]=0;
 			foreach ($lines as $line) {
-				$row[]=round(intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
+				$row[]=round(floatval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
 				$l++;
 				if ($l==$maxhour+1) {
 					array_unshift($row,explode(' ',$line)[0]);
