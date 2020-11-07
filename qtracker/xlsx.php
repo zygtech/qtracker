@@ -41,6 +41,7 @@
 		$excel=array();
 		foreach ($names as $key=>$name) {
 			$row=array();
+			$row[]='Localization';
 			$row[]='Date';
 			for ($i=$minhour;$i<=$maxhour;$i++)
 				$row[]=$i . ':00';
