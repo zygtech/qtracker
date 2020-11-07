@@ -54,7 +54,7 @@ foreach ($dir as $file)
 		$lines=file($installdir . '/places/' . $_GET['id'] . '.txt');
 		foreach ($lines as $line)
 			if ($_GET['hour']==substr(explode(' ',$line)[1],0,2)) {
-				$chart[]=round(intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
+				$chart[]=round(floatval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1)),2);
 				$label[]=explode(' ',$line)[0];
 			}
 		$data = json_encode($chart);
