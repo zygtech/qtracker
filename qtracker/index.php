@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
 	<style>
 		body { font-family: serif; font-size: 16; }
-		input,select,label { font-family: sans; font-size: 14px; }
+		input,select,label { font-family: sans-serif; font-size: 14px; }
 		a { text-decoration: none; color: #000000; }
 		a:hover { text-decoration: underline; }
 	</style>
