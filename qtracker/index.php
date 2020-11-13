@@ -47,7 +47,7 @@ foreach ($dir as $file)
 		}
 		?>
 		</select>
-		<input type="submit" value="CHART" /> <a style="font-family: sans; font-size: 14px;" href="./">RESET</a>
+		<input type="submit" value="CHART" /> <a style="font-family: sans-serif; font-size: 14px;" href="./">RESET</a>
 	</form><br />
 	<?php
 	if ($_GET['id']!='' && $_GET['hour']!='') {;
