@@ -9,7 +9,7 @@ from pathlib import Path
 def saveid(query):
     url = "https://zygtech.pl/qtracker/"
     path = os.path.dirname(os.path.abspath(__file__))
-    if (len(sys.argv) == 1):
+    if len(sys.argv) == 1:
         queryurl = url + "querypopularity.php?q=" + urllib.parse.quote(query);
         response = urlopen(queryurl)
         content = response.read()
@@ -18,7 +18,7 @@ def saveid(query):
         f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content).replace("'","").replace("b","") + "\n")
         f.close()
     else:
-        if (sys.argv[1]=="init"):
+        if sys.argv[1]=="init":
             if not(Path(path + "/names").is_dir()):
                 os.mkdir(path + "/names") 
             if not(Path(path + "/places").is_dir()):
