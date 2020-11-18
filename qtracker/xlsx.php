@@ -39,13 +39,13 @@
 			if ($file!='.' && $file!='..') 
 				$names[explode('.',$file)[0]]=trim(file($installdir . '/names/' . $file)[0]);
 		$excel=array();
+		$row=array();
+		$row[]='Localization';
+		$row[]='Date';
+		for ($i=$minhour;$i<=$maxhour;$i++)
+			$row[]=$i . ':00';
+		$excel[]=$row;
 		foreach ($names as $key=>$name) {
-			$row=array();
-			$row[]='Localization';
-			$row[]='Date';
-			for ($i=$minhour;$i<=$maxhour;$i++)
-				$row[]=$i . ':00';
-			$excel[]=$row;
 			$lines=file($installdir . '/places/' . $key . '.txt');
 			$l=intval(substr(explode(' ',$lines[0])[1],0,2));
 			$row=array();
