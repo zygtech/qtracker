@@ -13,6 +13,28 @@
 		a { text-decoration: none; color: #000000; }
 		a:hover { text-decoration: underline; }
 	</style>
+	<script>
+document.addEventListener("DOMContentLoaded", function(){
+	var lb = document.getElementById('selector');
+	var sel;
+	arrTexts = new Array();
+
+	for(i=0; i<lb.length; i++)  {
+		if (lb.options[i].selected) sel=lb.options[i].value;
+		arrTexts[i] = lb.options[i].text + ":" + lb.options[i].value;
+	}
+
+	arrTexts.sort();
+
+	for(i=0; i<lb.length; i++)  {
+		var arrSplit = arrTexts[i].split(":");
+		lb.options[i].text = arrSplit[0];
+		lb.options[i].value = arrSplit[1];
+		if (lb.options[i].value==sel) lb.options[i].selected = true;
+	}
+});
+
+	</script>
 </head>
 <body>
 	<center>
@@ -25,7 +47,7 @@ foreach ($dir as $file)
 ?>
 	<form>
 		<label>PLACE:</label>
-		<select style="width: 909px;" name="id">
+		<select id="selector" style="width: 909px;" name="id">
 		<option disabled<?php if ($_GET['id']=='') echo ' selected'; ?>>CHOOSE LOCALIZATION</option>
 		<?php
 		foreach ($names as $key=>$line) {
@@ -96,6 +118,7 @@ var myBarChart = new Chart(ctx, {
         }
     }
 });
+
 </script>
 	<?php
 	} else echo '<a href="xlsx.php">EXPORT ALL DATA TO EXCEL</a>';
