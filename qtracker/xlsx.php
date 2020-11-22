@@ -38,6 +38,7 @@
 		foreach ($dir as $file)
 			if ($file!='.' && $file!='..') 
 				$names[explode('.',$file)[0]]=trim(file($installdir . '/names/' . $file)[0]);
+		asort($names);
 		$excel=array();
 		$row=array();
 		$row[]='Localization';
