@@ -12,10 +12,11 @@ def saveid(query):
     if len(sys.argv) == 1:
         queryurl = url + "querypopularity.php?q=" + urllib.parse.quote(query);
         response = urlopen(queryurl)
-        content = response.read()
+        contentread = response.read()
+        content = contentread.decode('utf-8')
         f = open(path + "/places/" + hashlib.md5(query.encode('utf-8')).hexdigest() + ".txt", "a")
         d = datetime.datetime.now()
-        f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content).replace("'","").replace("b","") + "\n")
+        f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content) + "\n")
         f.close()
     else:
         if sys.argv[1]=="init":
