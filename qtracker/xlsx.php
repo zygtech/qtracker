@@ -15,8 +15,10 @@
 		$lines=file($installdir . '/places/' . $_GET['id'] . '.txt');
 		$l=intval(substr(explode(' ',$lines[0])[1],0,2));
 		$row=array();
-		for ($i=0;$i<$l-$minhour;$i++)
-			$row[]=0;
+		while ($l-$minhour>0) {
+			$l--;
+			array_unshift($lines,explode(' ',$lines[0])[0] . ' ' . $l . ': 0');
+		}
 		foreach ($lines as $line) {
 			$row[]=intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1));
 			$l++;
@@ -50,8 +52,10 @@
 			$lines=file($installdir . '/places/' . $key . '.txt');
 			$l=intval(substr(explode(' ',$lines[0])[1],0,2));
 			$row=array();
-			for ($i=0;$i<$l-$minhour;$i++)
-				$row[]=0;
+			while ($l-$minhour>0) {
+				$l--;
+				array_unshift($lines,explode(' ',$lines[0])[0] . ' ' . $l . ': 0');
+			}
 			foreach ($lines as $line) {
 				$row[]=intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1));
 				$l++;
