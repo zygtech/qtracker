@@ -1,5 +1,5 @@
 # qtracker
-## Query Popularity Tracker ([Example Site](https://zygtech.pl/qtracker/))
+## Query Popularity Tracker ([Example Site](https://zygtech.pl/tracker/))
 
 PHP and Python written scripts to monitor popularity of chosen places every hour between any range of hours. Uses:
 + [SimpleXLSXGen](https://github.com/shuchkin/simplexlsxgen/)
