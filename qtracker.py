@@ -10,7 +10,7 @@ def saveid(query):
     url = "https://zygtech.pl/qtracker/"
     path = os.path.dirname(os.path.abspath(__file__))
     if len(sys.argv) == 1:
-        queryurl = url + "querypopularity.php?q=" + urllib.parse.quote(query);
+        queryurl = url + "querypopularity.php?q=" + urllib.parse.quote(query)
         response = urlopen(queryurl)
         contentread = response.read()
         content = contentread.decode('utf-8')
